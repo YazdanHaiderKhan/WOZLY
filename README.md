@@ -111,4 +111,4 @@ wozly/
 
 ## Research Paper
 Based on: *Wozly: AI-Driven Multi-Agent System for Personalized Learning Roadmaps*
-Khan, Sharma, Goyal, Kwatra — Bharati Vidyapeeth's College of Engineering, New Delhi
+Yazdan Haider Khan, Rishav Sharma, Rohan Goyal,Ms. Heena Kwatra — Bharati Vidyapeeth's College of Engineering, New Delhi
