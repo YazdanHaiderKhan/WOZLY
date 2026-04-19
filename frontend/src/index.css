@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ──────────────────────────────────────────────────────── */
+:root {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --accent-lime: #CCFF00;
+  --accent-indigo: #6366F1;
+  --accent-emerald: #10B981;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --border-subtle: #E2E8F0;
+  --dark-panel: #111111;
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Animated Background ─────────────────────────────────────────────────── */
+.bg-animated {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+/* ── Cards & Panels ──────────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.dark-panel {
+  background: var(--dark-panel);
+  color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.lime-panel {
+  background: var(--accent-lime);
+  color: #111111;
+  border-radius: 16px;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+         bg-slate-900 text-white transition-all duration-200
+         hover:bg-slate-800 hover:-translate-y-0.5
+         active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0;
+}
+
+.btn-lime {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-sm
+         bg-lime-500 text-slate-900 transition-all duration-200
+         hover:bg-lime-400 hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+         bg-white text-slate-700 border border-slate-200 transition-all duration-200
+         hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-0.5
+         active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────────────────── */
+.input-field {
+  @apply w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-900
+         placeholder-slate-400 text-sm transition-all duration-200
+         focus:outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100;
+}
+
+/* ── Status Chips ────────────────────────────────────────────────────────── */
+.chip-pending   { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-500; }
+.chip-active    { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-lime-500 text-slate-900; }
+.chip-complete  { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-slate-900 text-white; }
+.chip-review    { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-700; }
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.2); }
+
+/* ── Code Blocks ─────────────────────────────────────────────────────────── */
+.code-block {
+  @apply bg-slate-900 text-slate-200 p-4 rounded-xl font-mono text-sm overflow-x-auto;
+}
+
+/* ── Progress bar ────────────────────────────────────────────────────────── */
+.progress-bar {
+  @apply h-1.5 rounded-full bg-slate-200 overflow-hidden;
+}
+.progress-fill {
+  @apply h-full rounded-full transition-all duration-700 ease-out bg-slate-900;
+}
