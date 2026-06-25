@@ -113,5 +113,5 @@ wozly/
 Based on: *Wozly: AI-Driven Multi-Agent System for Personalized Learning Roadmaps*
 Yazdan Haider Khan, Rishav Sharma, Rohan Goyal, Ms. Heena Kwatra — Bharati Vidyapeeth's College of Engineering, New Delhi
 
-Frontend contribution of this project is done by [Rishav Sharma](https://github.com/rbsharma1803).
+Frontend contribution and Integration of independent agents of this project is done by [Rishav Sharma](https://github.com/rbsharma1803).
 
